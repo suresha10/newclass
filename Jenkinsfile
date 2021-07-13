@@ -1,4 +1,4 @@
-echo "this is for all Env"
+//echo "this is for all Env"
 node {
 stages {
         stage('checkout') {
