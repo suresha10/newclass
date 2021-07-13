@@ -1,4 +1,5 @@
 echo "this is for all Env"
+node {
 stages {
         stage('checkout') {
             steps {
@@ -8,3 +9,6 @@ git branch: 'main',
             }
         }
 }
+}
+        
+
