@@ -11,7 +11,7 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
-	url "${nexusUrl}"
+	
 }
 
 dependencies {
@@ -24,12 +24,10 @@ dependencies {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "${nexusUrl}/repository/maven-releases") {
+            repository(url: "${nexusUrl}/repository/release/") {
                 authentication(userName: nexusUsername, password: nexusPassword)
             }
-            snapshotRepository(url: "${nexusUrl}/repository/maven-snapshots/") {
-                authentication(userName: nexusUsername, password: nexusPassword)
-            }
+            
         }
     }
 }
