@@ -1,15 +1,18 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'war'
+	id 'groovy'
+}
 apply plugin: 'java'
-
-
 group = 'org.sonatype.nexus.examples'
 version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '1.8'
 
 repositories {
-    maven {
-        url "${nexusUrl}/content/groups/public"
-    }
+	mavenCentral()
+	url "${nexusUrl}/content/groups/public"
 }
-
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -30,7 +33,19 @@ uploadArchives {
         }
     }
 }
+test {
+	useJUnitPlatform()
+}
+
 
 task wrapper( type: Wrapper, description: "create a gradlew" ) {
   gradleVersion = '2.0'
 }
+
+
+
+
+
+
+
+
