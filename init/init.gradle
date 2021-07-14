@@ -13,7 +13,7 @@ class NexusRepositoryPlugin implements Plugin<Gradle> {
   final Closure NexusConfig = {
     maven {
       name = 'standard-nexus'
-      url = 'http://ec2-15-206-212-6.ap-south-1.compute.amazonaws.com:8081//nexus/content/groups/public'
+      url = 'http://ec2-15-206-212-6.ap-south-1.compute.amazonaws.com:8081'
     }
     // if required you can add further repositories or groups here and they will
     // be left intact if the name starts with standard-
