@@ -21,7 +21,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-uploadArchives {
+upload Artifacts {
     repositories {
         mavenDeployer {
             repository(url: "${nexusUrl}/repository/release/") {
