@@ -1,5 +1,5 @@
 apply plugin: 'java'
-apply plugin: 'maven'
+apply plugin: 'gradle'
 
 group = 'org.sonatype.nexus.examples'
 version = '1.0.0-SNAPSHOT'
